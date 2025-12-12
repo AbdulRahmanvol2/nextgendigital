@@ -1105,3 +1105,78 @@ textarea:focus{
   display: block;
 }
 
+.testimonials-section{
+  padding:72px 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+.section-head { text-align:left; margin-bottom:28px; }
+.section-head h2 { font-size:36px; color:#fff; margin:0 0 8px; }
+.section-head p { margin:0; color:var(--muted); }
+
+/* Grid */
+.testi-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:28px;
+  align-items:stretch;
+}
+
+/* Card */
+.testi-card{
+  background: #021b63;                 /* white card like screenshot */
+  color: #0b1730;                   /* dark text */
+  padding:28px;
+  border-radius:14px;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+  position:relative;
+  overflow:hidden;
+  min-height:200px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s ease;
+}
+
+/* Hover lift (subtle) */
+.testi-card:hover{
+  transform:translateY(-8px);
+  box-shadow: 0 32px 60px rgba(2,6,23,0.16);
+}
+
+/* Quote mark accent */
+.quote-mark{
+  font-size:56px;
+  font-weight:700;
+  color: rgba(240,200,80,0.95); /* soft highlight — adjust to your accent color */
+  line-height:1;
+  margin-bottom:6px;
+  font-family: serif;
+}
+
+/* Testimonial text */
+.testi-text{
+  font-size:16px;
+  line-height:1.6;
+  color:#ffffff; /* muted dark */
+  margin:6px 0 18px;
+  flex:1;
+  opacity:0.95;
+}
+
+/* Meta (name + role) */
+.testi-meta{ margin-top:12px; display:block; }
+.testi-name{ font-weight:700; color:#407892; margin-bottom:6px; }
+.testi-role{ font-size:13px; color:var(--muted); }
+
+/* Responsive */
+@media (max-width:1000px){
+  .testi-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:600px){
+  .testi-grid{ grid-template-columns:1fr; }
+  .section-head { text-align:center; }
+  .testimonials-section { padding:48px 0; }
+}
+
+
