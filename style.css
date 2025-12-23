@@ -1315,3 +1315,27 @@ body {
   grid-column: 3 / 4;
 }
 
+
+@media (max-width: 768px) {
+  .timeline-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
+
+  /* reset manual column positioning */
+  .timeline-item.bottom:nth-of-type(5),
+  .timeline-item.bottom:nth-of-type(6) {
+    grid-column: auto;
+  }
+
+  .timeline-item {
+    font-size: 18px;
+  }
+
+  .timeline-item span {
+    font-size: 14px;
+  }
+}
+
+
+
