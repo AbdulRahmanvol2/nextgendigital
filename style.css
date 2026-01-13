@@ -253,41 +253,6 @@ nav a:hover{
   pointer-events:none;
 }
 
-/* Darker hero overlay on mobile for better contrast */
-@media (max-width: 600px) {
-  .hero {
-    position: relative;
-    color: #f3f6ff; /* softer white for readability */
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.42); /* darken only on mobile */
-    backdrop-filter: blur(4px);
-    z-index: 0;
-  }
-
-  .hero .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-title {
-    color: #ffffff;
-    text-shadow: 0 0 14px rgba(0,0,0,0.45);
-  }
-
-  .hero-sub {
-    color: #d8e1ff;
-    text-shadow: 0 0 10px rgba(0,0,0,0.35);
-  }
-
-  .btn-primary {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-  }
-}
 
 /* ====== Sections ====== */
 .section{padding:72px 0}
@@ -390,7 +355,7 @@ nav a:hover{
   position:relative;
   padding-left:20px;
   margin-bottom:6px;
-  color:var(--muted);
+  color:black;
   font-size:14px;
 }
 
@@ -478,7 +443,7 @@ textarea{min-height:120px;resize:vertical}
 /* ====== About page extra styles ====== */
 .inner-hero{
   padding:80px 0 40px;
-  background:radial-gradient(circle at top,#1d4ed8 0, transparent 55%);
+  background:radial-gradient(circle at top,#7893ff 0, transparent 55%);
 }
 
 /* ===== About Page Hero with Image + Gradient ===== */
@@ -489,9 +454,9 @@ textarea{min-height:120px;resize:vertical}
   background:
     radial-gradient(
       circle at center,
+       rgb(106, 173, 236) 60%,
+      rgb(3, 188, 249) 100%
       rgba(37, 99, 235, 0.9) 0%,
-      rgba(7, 14, 40, 1) 60%,
-      rgba(7, 14, 40, 1) 100%
     );
 }
 
@@ -500,7 +465,7 @@ textarea{min-height:120px;resize:vertical}
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/LOGO only.jpg"); /* <-- placeholder */
+  background-image: url("assets/Picture12.png"); /* <-- placeholder */
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -532,7 +497,7 @@ textarea{min-height:120px;resize:vertical}
 
 .inner-hero-sub{
   max-width:720px;
-  color:var(--muted);
+  color:black;
   font-size:15px;
 }
 
@@ -562,7 +527,7 @@ textarea{min-height:120px;resize:vertical}
 
 .about-fact-label{
   font-size:13px;
-  color:var(--muted);
+  color:black;
 }
 
 .vmv-grid{
@@ -1276,7 +1241,7 @@ body {
 
 .timeline-section {
   padding: 100px 8%;
-  background: radial-gradient(circle at top, #0b1d3a, #020b1a);
+  background: radial-gradient(circle at top,#70a6e3 ,#9ccee9);
   color: white;
 }
 
@@ -1296,6 +1261,7 @@ body {
 .timeline-item {
   font-size: 22px;
   font-weight: 600;
+  color: black;
 }
 
 .timeline-item span {
@@ -1315,7 +1281,6 @@ body {
   grid-column: 3 / 4;
 }
 
-
 @media (max-width: 768px) {
   .timeline-grid {
     grid-template-columns: 1fr 1fr;
@@ -1330,6 +1295,7 @@ body {
 
   .timeline-item {
     font-size: 18px;
+    color: black;
   }
 
   .timeline-item span {
@@ -1337,5 +1303,659 @@ body {
   }
 }
 
+/* ======================================================
+   NGDS PDF COLOR OVERRIDES 
+   ====================================================== */
 
 
+:root {
+  --primary: #0B6FAF;
+  --primary-dark: #021B66;
+  --accent: #2FA4E7;
+
+  --bg-main: #70a6e3;
+  --bg-card: #FFFFFF;
+  --bg-section: #FFFFFF;
+
+  --text-heading: #0A2540;
+  --text-body: #425466;
+  --text-muted: #6B7C93;
+
+  --border-light: #D6E2F0;
+}
+
+/* Base */
+body {
+  background: var(--bg-main) !important;
+  color: var(--text-body) !important;
+}
+
+/* Headings */
+h1{
+  color: #0a4f7a;
+}
+
+h2, h3 {
+  color: rgb(0, 147, 188) !important;
+}
+
+
+
+/* Muted text */
+.muted,
+.section-lead,
+.hero-sub {
+  color: rgb(0, 0, 0) !important;
+}
+
+
+/* Navbar */
+header {
+  background: rgb(2, 2, 66) !important;
+}
+
+nav a {
+  color: #E6F0FA !important;
+}
+
+nav a:hover {
+  color: #FFFFFF !important;
+}
+
+/* Logo text */
+.logo-main {
+  color: #FFFFFF !important;
+}
+.logo-sub {
+  color: #CFE7F7 !important;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #021B66 0%,
+    #0B6FAF 70%
+  ) !important;
+}
+
+.hero-title {
+  color: #FFFFFF !important;
+}
+
+/* Cards */
+.card,
+.vmv-card,
+.about-facts-card,
+.partner-card,
+.testi-card,
+.contact-card {
+  background: var(--bg-card) !important;
+  color: var(--text-body) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 10px 28px rgba(2, 20, 60, 0.08) !important;
+}
+
+/* Card hover */
+.card:hover,
+.partner-card:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 16px 36px rgba(11, 111, 175, 0.18) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-outline {
+  border: 1px solid var(--primary) !important;
+ 
+}
+
+/* Sections */
+.section {
+  background: var(--bg-section) !important;
+}
+
+/* Partners wrapper */
+.partners-wrapper {
+  background: #EAF3FB !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+/* Footer */
+.site-footer {
+  background: rgb(2, 2, 66) !important;
+  color: #EAF3FB !important;
+}
+
+.footer-list a {
+  color: #CFE7F7 !important;
+}
+
+.footer-list a:hover {
+  color: #FFFFFF !important;
+}
+
+/* ================= HERO TEXT FIX ================= */
+
+.hero-sub {
+  color: #EAF3FB !important;   /* clean readable light text */
+  opacity: 0.95 !important;
+  font-weight: 400;
+}
+
+.hero p,
+.hero .muted {
+  color: #EAF3FB !important;
+}
+
+/* ================= SERVICES & SOLUTIONS CARDS ================= */
+
+/* Card border */
+#services .card,
+#solutions .card {
+  border: 1.5px solid #0B6FAF !important;   /* brand blue */
+  background: #FFFFFF !important;
+}
+
+/* Card title */
+#services .card h3,
+#solutions .card h3 {
+  color: #0A2540 !important;  /* strong heading */
+}
+
+/* Card description text */
+#services .card p,
+#solutions .card p {
+  color: #1F2937 !important;  /* near-black, readable */
+  opacity: 1 !important;
+  font-weight: 400;
+}
+
+/* Hover state (subtle, professional) */
+#services .card:hover,
+#solutions .card:hover {
+  background: #EAF3FB !important;
+  border-color: #021B66 !important;
+  box-shadow: 0 12px 30px rgba(11, 111, 175, 0.18) !important;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.section h2 {
+  color: #0A2540 !important;
+  font-weight: 700;
+}
+
+.section-lead {
+  color: #425466 !important;
+}
+
+/* ================= THICKER CARD BORDERS ================= */
+
+/* Services & Solutions cards */
+#services .card,
+#solutions .card {
+  border-width: 4px !important;   /* thicker but elegant */
+}
+
+/* Slightly stronger hover emphasis */
+#services .card:hover,
+#solutions .card:hover {
+  border-width: 2.5px !important;
+}
+
+
+/* ================= VALUES SECTION (PDF STYLE) ================= */
+
+.values-section {
+  background: #ffffff !important;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* LEFT BLUE PANEL */
+.values-visual {
+  background: linear-gradient(180deg, #0B6FAF, #021B66);
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.values-visual img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+/* RIGHT CONTENT */
+.values-content h2 {
+  margin-bottom: 24px;
+  color: #0A2540;
+}
+
+/* VALUE ITEM */
+.value-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  align-items: flex-start;
+}
+
+/* ICON */
+.value-icon {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0B6FAF;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* TEXT */
+.value-item h4 {
+  margin: 0 0 4px;
+  color: #0A2540;
+  font-size: 16px;
+}
+
+.value-item p {
+  margin: 0;
+  color: #1F2937;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-visual {
+    max-width: 420px;
+  }
+}
+
+/* ================= VALUES SECTION – BACKGROUND IMAGE STYLE ================= */
+
+.values-section {
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url("assets/values-tech.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* Ensure content stays above background */
+.values-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;          /* keeps text readable */
+}
+
+/* Heading */
+.values-section h2 {
+  color: #0A2540;
+}
+
+/* Value items */
+.value-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+/* Icons */
+.value-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0B6FAF;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Text */
+.value-item h4 {
+  margin: 0 0 4px;
+  color: #0A2540;
+}
+
+.value-item p {
+  margin: 0;
+  color: #1F2937;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   GLOBAL SECTION GRADIENT (EXCEPT HERO)
+   ====================================================== */
+
+/* All sections */
+.section {
+  background: linear-gradient(
+    180deg,
+    #70a6e3 0%,
+    #9ccee9 60%
+  ) !important;
+}
+
+/* Explicitly exclude hero */
+.hero {
+  background: inherit;
+}
+
+/* ======================================================
+   GRADIENT BACKGROUND FOR ALL CARDS
+   ====================================================== */
+
+/* Core card types */
+.card,
+.vmv-card,
+.about-facts-card,
+.testi-card,
+.contact-card {
+  background: linear-gradient(
+    180deg,
+    #70a6e3 0%,
+    #9ccee9  70%
+  ) !important;
+
+  border: 2.5px solid #0B6FAF !important;
+  border-width: 12px;
+  box-shadow: 0 12px 28px rgba(11, 111, 175, 0.12) !important;
+}
+
+/* Card titles */
+.card h3,
+.vmv-card h3,
+.testi-card h4 {
+  color: #0A2540 !important;
+}
+
+/* Card descriptions */
+.card p,
+.vmv-card p,
+.testi-card p {
+  color: #1F2937 !important;
+  opacity: 1 !important;
+}
+
+/* Hover – subtle depth */
+.card:hover,
+.partner-card:hover,
+.testi-card:hover {
+  background: linear-gradient(
+    180deg,
+     #70a6e3 0%,
+    #9ccee9 75%
+  ) !important;
+
+  border-color: #021B66 !important;
+  box-shadow: 0 18px 40px rgba(11, 111, 175, 0.18) !important;
+}
+
+/* ================= REMOVE RIGHT-SIDE HERO GLOW ================= */
+
+/* Kill any extra gradient overlays */
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+/* Disable decorative gradient blobs */
+.hero-deco {
+  display: none !important;
+}
+
+/* Ensure hero background stays clean */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #021B66 0%,
+    #0B6FAF 100%
+  ) !important;
+}
+
+/* ================= CONTACT LEFT TEXT FIX ================= */
+
+.contact-left,
+.contact-left p,
+.contact-left span {
+  color: #0A2540 !important; /* strong navy */
+}
+
+/* Section labels like LOCATION / REACH US */
+.contact-heading {
+  color: #021B66 !important;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+/* Email link */
+.contact-reach a {
+  color: #004671 !important;
+  font-weight: 600;
+}
+
+.contact-reach a:hover {
+  text-decoration: underline;
+}
+
+/* ================= CONTACT INPUT FIELDS ================= */
+
+.contact-field input,
+.contact-field textarea {
+  background: #ffffff !important;
+  color: #0A2540 !important;
+  border: 2px solid #0B6FAF !important;
+  box-shadow: none !important;
+
+}
+
+/* Placeholder text */
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #6B7C93 !important;
+  opacity: 1;
+}
+
+/* Labels */
+.contact-field label {
+  color: #021B66 !important;
+  font-weight: 600;
+}
+
+/* Focus state */
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: #021B66 !important;
+  box-shadow: 0 0 0 3px rgba(11, 111, 175, 0.15);
+}
+
+/* ================= WHAT WE DELIVER (PDF STYLE) ================= */
+
+.deliver-section {
+  background: linear-gradient(180deg, #F0F7FF 0%, #FFFFFF 65%);
+}
+
+.deliver-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.deliver-item {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 2.5px solid #0B6FAF;
+  border-radius: 40px;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/* Number circle */
+.deliver-num {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0B6FAF;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 18px;
+}
+
+/* Text */
+.deliver-content h4 {
+  margin: 0 0 4px;
+  color: #0A2540;
+  font-size: 15px;
+}
+
+.deliver-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #425466;
+}
+
+/* Hover (subtle) */
+.deliver-item:hover {
+  background: #F5FAFF;
+  border-color: #021B66;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .deliver-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= HARD SECTION SEPARATION FIX ================= */
+
+/* Ensure each section is isolated */
+section {
+  position: relative;
+  clear: both;
+  overflow: visible !important;
+}
+
+/* Fix grid / flex swallowing next sections */
+.deliver-section,
+#services {
+  overflow: visible !important;
+}
+
+/* Prevent service items from expanding layout */
+.deliver-item {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* ================= SOLUTIONS SECTION RESET ================= */
+
+#solutions {
+  margin-top: 80px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #70a6e3 0%,
+    #9ccee9 70%
+  ) !important;
+}
+
+/* ======================================================
+   PARTNERS SECTION – FIX GRADIENT SCOPE
+   ====================================================== */
+
+/* Big wrapper card ONLY */
+.partners-wrapper,
+.partners-container,
+.partners-section .container {
+  background: linear-gradient(
+    180deg,
+    #021B66 0%,
+    #0B6FAF 70%
+  ) !important;
+}
+
+/* Individual partner logo cards */
+.partner-card {
+  background: #FFFFFF !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08) !important;
+  border: 1.5px solid #D6E2F0 !important;
+}
+
+/* Remove any inherited gradients */
+.partner-card::before,
+.partner-card::after {
+  display: none !important;
+}
+
+.footer-copy,
+.footer-tagline
+{
+  color: #00d1ff !important;
+}
+
+.timeline-header{
+  color: #021b66 !important;
+}
+
+/* ================= FLOATING WHATSAPP BUTTON ================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.45);
+  z-index: 9999;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.6);
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+  }
+}
