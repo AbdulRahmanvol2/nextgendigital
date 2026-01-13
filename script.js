@@ -233,27 +233,4 @@ if (form) {
   requestAnimationFrame(draw);
 })();
 
-// ====== Testimonials slider (simple) ======
-const track = document.getElementById('testimonial-track');
-const prevBtn = document.getElementById('prev-test');
-const nextBtn = document.getElementById('next-test');
-if(track){
-  const slides = Array.from(track.children);
-  let index = 0;
-  const update = ()=> {
-    const width = slides[0].offsetWidth + 18; // card width + gap
-    track.style.transform = `translateX(-${index * width}px)`;
-  };
-  window.addEventListener('resize', update);
-  nextBtn && nextBtn.addEventListener('click', ()=>{ index = Math.min(index + 1, slides.length - 1); update(); });
-  prevBtn && prevBtn.addEventListener('click', ()=>{ index = Math.max(index - 1, 0); update(); });
-
-  // autoplay small
-  let auto = setInterval(()=>{ index = (index + 1) % slides.length; update(); }, 4500);
-  // pause on hover
-  track.addEventListener('mouseenter', ()=>clearInterval(auto));
-  track.addEventListener('mouseleave', ()=> auto = setInterval(()=>{ index = (index + 1) % slides.length; update(); }, 4500));
-  // initial
-  setTimeout(update, 100);
-}
 
